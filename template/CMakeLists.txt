@@ -1,0 +1,5 @@
+cmake_minimum_required( VERSION 3.5)
+set(CMAKE_CXX_FLAGS "-O2 -std=c++11")
+project( template_sample CXX)
+add_executable( template_sample src/template.cpp )
+add_executable( class_template src/class_template.cpp )
