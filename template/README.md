@@ -55,8 +55,10 @@ $ nm  --demangle class_template.o | grep Stack
 
 ## ヘッダとソースコードの分離
 
-[ヘッダ](inc/template_separate.h)
-[ソース](src/template_seperate.cpp)
+* [ヘッダ](inc/template_separate.h)
+* [ソース](src/template_separate.cpp)
+
+
 
 * クラスの実体を実装する際に関数の１つ１つにtemplateを記述する必要がある。
 * クラス/関数テンプレートの実装は通常ヘッダファイルに置き、コンパイル単位内にその実装が現れなければならない  
