@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-
+#include "../inc/person.h"
 void intVectorSample( void );
 void classVector( void );
 
@@ -56,21 +56,6 @@ void intVectorSample( void )
     return;
 }
 
-class Person
-{
-    private:
-        std::string name;
-        int age;
-    public:
-        Person( std::string name, int age){ this->name = name; this->age = age;}
-        std::string toString( void ){
-            std::string s = name ;
-            s += ":"+ std::to_string(age);
-            return s;
-        }
-       
-
-};
 void classVector()
 {
 
