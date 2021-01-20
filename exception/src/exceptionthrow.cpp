@@ -82,7 +82,14 @@ void func4(){
     END_LOG();
     return ;
 }
-void func5(){ 
+void func5() { 
+    START_LOG();
+    throw(CustomError("custom error"));
+    END_LOG();
+    return ;
+}
+
+void func6() noexcept { 
     START_LOG();
     throw(CustomError("custom error"));
     END_LOG();
@@ -90,19 +97,12 @@ void func5(){
 }
 
 
-void func_noexcept () noexcept
-{
-    START_LOG();
-    END_LOG();
-    return;
-}
 typedef void (*funcPtr)();
 funcPtr a[]={
     func1,
     func2,
     func3,
     func4,
-    func_noexcept,
 };
 
 int main( int argc,char** argv)
@@ -120,6 +120,15 @@ int main( int argc,char** argv)
         std::cout << "Catch Error recv message:" ;
         std::cout << error.toString()<< std::endl;
     }
-    
+
+     try{
+        func6();
+    }catch(  CustomError& error)
+    {
+        std::cout << "Catch Error recv message:" ;
+        std::cout << error.toString()<< std::endl;
+    }
+
+   
     return 0;
 }
