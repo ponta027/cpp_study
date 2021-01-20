@@ -23,6 +23,12 @@ noexcept(f(arg))のようにnoexcept演算子に式を指定することがで�
       しかしreturn文に指定する式が決して例外を送出しないという保証があることで、popの関数はT型のオブジェクトを返せるようになる。
       参照： ジェネリックコンポーネントにおける例外安全性 - boostjp
 
+
+noexceptをつけた関数がthrowする場合、g++ではコンパイル時に警告が出力される。
+実行した場合、関数をtry/catchでくくってもcatchできない。
+
+[sample](/exception/src/exceptionthrow.cpp)
+
 ## 補足
 
 例外は、例外的条件に対してのみ使用すべき。
