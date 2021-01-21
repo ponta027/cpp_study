@@ -22,7 +22,7 @@
 
 今後の予定
 
-1. auto
+1. [auto](/auto/README.md)
 1. lambda
 1. initializer
 
