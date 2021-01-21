@@ -16,11 +16,13 @@
 1. [container](/container/README.md)
 1. [template](/template/README.md)
 1. [thisポインタ](/thispointer/README.md)
-
-
-今後の予定
 1. [例外](/exception/README.md)
 1. [operator](/operator/README.md)
 
 
+今後の予定
+
+1. auto
+1. lambda
+1. initializer
 
