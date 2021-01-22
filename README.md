@@ -25,4 +25,5 @@
 1. [auto](/auto/README.md)
 1. lambda
 1. initializer
+1. stream
 
