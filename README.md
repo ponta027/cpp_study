@@ -23,7 +23,7 @@
 今後の予定
 
 1. [auto](/auto/README.md)
-1. lambda
-1. initializer
-1. stream
+1. [stream](/stream/README.md)
+1. [lambda](/lambda/README.md)
+1. [initializer](/initializer/README.md)
 
