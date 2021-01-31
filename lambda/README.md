@@ -78,8 +78,7 @@ function a()
     auto f =[&]() { return x  + 1 ;}
 }
 ```
-
-
+[sample](/lambda/src/lambda_sample.cpp)
 
 以上
 
