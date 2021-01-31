@@ -18,12 +18,14 @@
 1. [thisポインタ](/thispointer/README.md)
 1. [例外](/exception/README.md)
 1. [operator](/operator/README.md)
-
+1. [auto](/auto/README.md)
+1. [stream](/stream/README.md)
+1. [initializer](/initializer/README.md)
 
 今後の予定
 
-1. [auto](/auto/README.md)
-1. [stream](/stream/README.md)
 1. [lambda](/lambda/README.md)
-1. [initializer](/initializer/README.md)
+1. [functional](/functional/README.md)
 
+
+以上
