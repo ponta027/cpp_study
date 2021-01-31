@@ -15,5 +15,15 @@ auto による型推論は、以下の場所で初期化子がある場合のみ
 
 [auto](/auto/src/autosample.cpp)
 
+## decltype
+
+
+オペランドで指定した型を取得する機能。
+型を指定する必用がある箇所で、変数に対してdecltypeを呼び出すと型名が取得できる。
+
+```
+int i = 0;
+decltype(i) j = 0;                      // j は int 型
+```
 
 以上
