@@ -24,8 +24,8 @@
 
 今後の予定
 
+1. [function_object](/function_object/README.md)
 1. [lambda](/lambda/README.md)
-1. [functional](/functional/README.md)
 
 
 以上
