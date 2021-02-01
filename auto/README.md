@@ -26,4 +26,23 @@ int i = 0;
 decltype(i) j = 0;                      // j は int 型
 ```
 
+* 経緯
+
+C++03までで、関数テンプレートの戻り値の型をあらゆるケースで正確に表現できることは不可能。
+
+```cpp
+template <class Func, class T>
+??? trace(Func f, T t) { std::cout << "Calling f"; return f(t); }
+```
+
+C++11では関数宣言構文を使用することで下記のように書くことができた。
+
+```cpp
+
+template <class Func, class T>
+auto trace(Func f, T t) -> decltype(f(t)) { std::cout << "Calling f"; return f(t); }```
+
+```
+
 以上
+
