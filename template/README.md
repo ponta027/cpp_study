@@ -1,7 +1,40 @@
 # template
 
+差し替え可能な部分を持つ雛形を用意し、
+それを利用することで書かなければならなコードの量をへらす。
 
+テンプレートの種類は以下の４種類がある。
+
+
+```plantuml
+title テンプレート
+
+@startmindmap
+* template
+** 関数テンプレート
+**  クラステンプレート
+**  メンバーテンプレート
+**  エイリアステンプレート
+@endmindmap
+```
 ## function template
+
+sample code
+
+```c
+template <class T> T MAX(T x, T y)
+{
+  return x < y ? y : x;
+}
+
+```
+
+
+* T:何かしらの型
+  * classにはクラスstruct, int ,char*などの組み込み型も指定可能
+
+* テンプレートパラメータに具体的な型
+* が当てはめられ、実コード(実体、インスタンス)が生成。テンプレートのインスタンス化
 
 [sample_code](src/template.cpp)
 
@@ -53,7 +86,7 @@ $ nm  --demangle class_template.o | grep Stack
 
 
 
-## ヘッダとソースコードの分離
+### ヘッダとソースコードの分離
 
 * [ヘッダ](inc/template_separate.h)
 * [ソース](src/template_separate.cpp)
@@ -65,4 +98,19 @@ $ nm  --demangle class_template.o | grep Stack
   インスタンス化のときにはその定義（実装)が必要になるため。
   
 nmの結果を見たとおり、コンパイル時に使用する型の実体を作る必要があるため、テンプレートの実装もコンパイル時に知る必要がある。
+
+
+
+## メンバーテンプレート
+
+classのメンバー関数をテンプレートにすることができる。
+
+
+
+
+
+##  エイリアステンプレート
+
+T.B.D
+
 

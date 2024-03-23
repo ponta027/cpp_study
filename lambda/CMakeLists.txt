@@ -9,5 +9,6 @@ cmake_minimum_required(VERSION 3.5)
 
 
 add_executable( lambda_sample src/lambda_sample.cpp)
+add_executable( lambda_codezine src/lambda_codezine.cpp)
 
 

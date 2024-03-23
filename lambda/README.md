@@ -57,7 +57,6 @@ int main(int argc, char* argv[]) {
 000105c0 t main::{lambda(int, int)#1}::operator()(int, int) const
 ```
 
-
 最後の行にmain::lambdaというオブジェクトが生成されている。
 
 これがlambda式を実装した際に生成されたオブジェクトである。
