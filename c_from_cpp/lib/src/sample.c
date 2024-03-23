@@ -2,5 +2,5 @@
 
 void function( void )
 {
-    printf("function¥n");
+    printf("function\n");
 }
