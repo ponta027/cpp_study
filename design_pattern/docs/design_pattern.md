@@ -28,7 +28,7 @@ https://ja.wikipedia.org/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%8
 |---------------|----|----|
 |AbstractFactory|-   |-   |
 |Builder        |-   |-   |
-|FactoryMethod  |-   |-   |
+|FactoryMethod  | オブジェクト生成をサブクラスに任せることで、クライアントと具象クラスの生成を分離するパターン  |-   |
 |Prototype      |-   |-   |
 |Signleton      | インスタンスが単一であることを保証する   |-   |
 
@@ -102,9 +102,45 @@ FactoryA -> ProductA
 FactoryB -> ProductB
 
 class User
-User --> Factory
+User --> Factory:createProduct
 
 ```
+
+
+## AbstractFactory
+
+```plantuml
+
+title AbstractFactory
+
+class AbstractFactory{
+    createProductA()
+    createProductB()
+}
+class FactoryA
+class FactoryB
+
+AbstractFactory <|-- FactoryA
+AbstractFactory <|-- FactoryB
+
+class AbstractProductA
+class AbstractProductB
+
+AbstractProductA <|-- ProductA
+AbstractProductB <|-- ProductB
+
+Factory -> ProductA
+Factory -> ProductB
+
+```
+
+* FactoryMethodとAbstractFactoryの違い
+    * FactoryMethod：クラスパターン
+    * AbstractFactory:オブジェクトパターン
+* FactoryMethod
+    * Creatorクラスが子クラスがオブジェクト生成を委ねる
+* AbstractFactoryMethod
+    * ClientインスタンスがConcreteFactoryのインスタンスにオブジェクトの生成を委ねる
 
 -------------------------------------------
 

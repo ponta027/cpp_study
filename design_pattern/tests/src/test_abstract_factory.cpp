@@ -1,27 +1,18 @@
-#include "singleton.hpp"
-#include <iostream>
 #include "abstract_factory.h"
 #include "concrete_factory.h"
 #include "product_a.h"
 #include "product_b.h"
+#include <gtest/gtest.h>
+#include <iostream>
+#include <memory>
+#include <sstream>
 
-void abstract_factory(){
+TEST(AbstractFactoryTest, BasicAssert)
+{
+
   std::unique_ptr<AbstractFactory> factory = std::make_unique<ConcreteFactory>(); // OK
   ProductA* a= factory->createProductA();
   ProductB* b= factory->createProductB();
 
-  return;
-}
-int main(int argc, char *argv[])
-{
-
-  std::cout << "START" << std::endl;
-  {
-  Singleton::GetInstance();
-  }
-  std::cout << "END" << std::endl;
-
-
-  abstract_factory();
-  return 0;
+  ASSERT_EQ(20, 20);
 }

@@ -11,10 +11,12 @@ add_executable(design_pattern src/main.cpp )
 target_include_directories(design_pattern 
   PRIVATE 
   ${CMAKE_SOURCE_DIR}/libs/singleton/inc
+  ${CMAKE_SOURCE_DIR}/libs/abstractfactory/inc
 )
 
 target_link_libraries(design_pattern 
   singleton
+  abstractfactory
 )
 
 add_subdirectory(libs)

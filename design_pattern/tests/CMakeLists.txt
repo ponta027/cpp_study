@@ -20,12 +20,14 @@ target_link_libraries(
   GTest::gtest_main
   singleton
   factory
+  abstractfactory
 )
 target_include_directories(
   ${EXECUTABLE_NAME}
   PRIVATE 
   ${CMAKE_SOURCE_DIR}/libs/singleton/inc
   ${CMAKE_SOURCE_DIR}/libs/factory/inc
+  ${CMAKE_SOURCE_DIR}/libs/abstractfactory/inc
 )
 
 include(GoogleTest)

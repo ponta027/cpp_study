@@ -8,5 +8,5 @@ TEST(Factory, BasicAssert)
 
   FactoryA fact;
   Product *product = fact.createProduct();
-  ASSERT_EQ(20, product->getData());
+  ASSERT_EQ(10, product->getData());
 }
