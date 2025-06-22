@@ -57,7 +57,7 @@ https://ja.wikipedia.org/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%8
 |Memento                |-   |-   |
 |Observer               |-   |-   |
 |State                  |-   |-   |
-|Template Method        |-   |-   |
+|Template Method        |あるアルゴリズムの途中経過で必要な処理を抽象メソッドに委ね、その実装を変えることで処理内容を変えられるようにする。   |-   |
 |Visitor                |-   |-   |
 
 
@@ -164,5 +164,29 @@ ConcreteBuilder -> Product
 ```
 
 
+# Template method
+
+
+```plantuml
+
+@startuml
+
+class AbstractClass{
+    + templateMethod() // /nthis.method1();/nthis.method2();
+    # method1();
+    # method2();
+}
+class ConcreteClass{
+    # method1()
+    # method2()
+}
+
+AbstractClass <|--- ConcreteClass
+@enduml
+
+```
+
+
 -------------------------------------------
+
 

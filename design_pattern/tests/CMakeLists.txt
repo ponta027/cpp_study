@@ -1,4 +1,4 @@
-set(EXECUTABLE_NAME "hello_test")
+set(EXECUTABLE_NAME "test_design_pattern")
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -7,7 +7,12 @@ FetchContent_Declare(
 # For Windows: Prevent overriding the parent project's compiler/linker settings
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
+FetchContent_GetProperties(googletest)
 enable_testing()
+
+set(GTEST_INCLUDE_DIR ${gtest_SOURCE_DIR}/include)
+set(GMOCK_INCLUDE_DIR ${gmock_SOURCE_DIR}/include)
+include_directories(${GTEST_INCLUDE_DIR} ${GMOCK_INCLUDE_DIR})
 
 
 file(GLOB SRC_FILES "src/*.cpp")
@@ -18,10 +23,12 @@ add_executable(
 target_link_libraries(
   ${EXECUTABLE_NAME}
   GTest::gtest_main
+  GTest::gmock
   singleton
   factory
   abstractfactory
   builder
+  template
 )
 target_include_directories(
   ${EXECUTABLE_NAME}
@@ -30,6 +37,7 @@ target_include_directories(
   ${CMAKE_SOURCE_DIR}/libs/builder/inc
   ${CMAKE_SOURCE_DIR}/libs/factory/inc
   ${CMAKE_SOURCE_DIR}/libs/singleton/inc
+  ${CMAKE_SOURCE_DIR}/libs/template/inc
 )
 
 include(GoogleTest)
