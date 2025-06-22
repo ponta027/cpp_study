@@ -21,13 +21,15 @@ target_link_libraries(
   singleton
   factory
   abstractfactory
+  builder
 )
 target_include_directories(
   ${EXECUTABLE_NAME}
   PRIVATE 
-  ${CMAKE_SOURCE_DIR}/libs/singleton/inc
-  ${CMAKE_SOURCE_DIR}/libs/factory/inc
   ${CMAKE_SOURCE_DIR}/libs/abstractfactory/inc
+  ${CMAKE_SOURCE_DIR}/libs/builder/inc
+  ${CMAKE_SOURCE_DIR}/libs/factory/inc
+  ${CMAKE_SOURCE_DIR}/libs/singleton/inc
 )
 
 include(GoogleTest)

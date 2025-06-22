@@ -27,3 +27,4 @@ add_custom_target(
    test
    ctest --test-dir tests --output-junit report.xml
 )
+

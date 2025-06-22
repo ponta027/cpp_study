@@ -27,7 +27,7 @@ https://ja.wikipedia.org/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%8
 |パターン名     |概要|備考|
 |---------------|----|----|
 |AbstractFactory|-   |-   |
-|Builder        |-   |-   |
+|Builder        |複合化されたインスタンスの生成過程を隠蔽する   |-   |
 |FactoryMethod  | オブジェクト生成をサブクラスに任せることで、クライアントと具象クラスの生成を分離するパターン  |-   |
 |Prototype      |-   |-   |
 |Signleton      | インスタンスが単一であることを保証する   |-   |
@@ -141,6 +141,28 @@ Factory -> ProductB
     * Creatorクラスが子クラスがオブジェクト生成を委ねる
 * AbstractFactoryMethod
     * ClientインスタンスがConcreteFactoryのインスタンスにオブジェクトの生成を委ねる
+
+
+# Buiilder
+
+```plantuml
+title ビルダーパターン
+
+class Director
+class Builder
+class ConcreteBuilder{
+    buildPart
+    getResult: Product
+}
+class Product
+
+
+Director *-- Builder
+Builder <|--- ConcreteBuilder
+ConcreteBuilder -> Product
+
+```
+
 
 -------------------------------------------
 
