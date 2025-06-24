@@ -38,7 +38,7 @@ https://ja.wikipedia.org/wiki/%E3%83%9D%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%95%E3%8
 
 |パターン名|概要|備考|
 |----------|----|----|
-|Adapter   |-   |-   |
+|Adapter   |元々関連性のない2つのクラスを接続するクラスを作る。   |-   |
 |Bridge    |-   |-   |
 |Decorator |-   |-   |
 |Facade    |-   |-   |
@@ -187,6 +187,32 @@ AbstractClass <|--- ConcreteClass
 ```
 
 
+# Adapter
+
+```plantuml
+
+@startuml
+title Adapter
+
+
+interface Target{
+   requiredMethod() 
+}
+class Adapter{
+   requiredMethod() 
+}
+class Adaptee{
+    oldMethod()
+}
+Target <|-- Adapter
+Adaptee *-- Adapter
+
+
+@enduml
+
+```
+
 -------------------------------------------
+
 
 

@@ -3,4 +3,5 @@ add_subdirectory(factory)
 add_subdirectory(abstractfactory)
 add_subdirectory(builder)
 add_subdirectory(template)
+add_subdirectory(adapter)
 
